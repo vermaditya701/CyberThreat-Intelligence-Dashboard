@@ -120,3 +120,91 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Add this to your global CSS (e.g., globals.css or index.css) */
+@keyframes matrix {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 1000px; }
+}
+/* Matrix Rain Background Canvas */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: black;
+  pointer-events: none;
+}
+
+/* Glitch Text Animation */
+.glitch-text {
+  position: relative;
+  color: #00ff00;
+  font-family: monospace;
+  text-shadow: 0 0 5px #0f0, 0 0 10px #0f0;
+  animation: glitch 1s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #0f0;
+  background: transparent;
+  clip: rect(0, 0, 0, 0);
+}
+
+.glitch-text::before {
+  animation: glitchTop 1s infinite linear;
+  color: #0ff;
+  z-index: -1;
+}
+
+.glitch-text::after {
+  animation: glitchBottom 1s infinite linear;
+  color: #f0f;
+  z-index: -2;
+}
+
+@keyframes glitch {
+  0% { transform: none; }
+  20% { transform: translate(2px, 0); }
+  40% { transform: translate(-2px, 0); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(-2px, -2px); }
+  100% { transform: none; }
+}
+
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  10% { clip: rect(0, 9999px, 5px, 0); }
+  20% { clip: rect(0, 9999px, 0, 0); }
+  30% { clip: rect(0, 9999px, 8px, 0); }
+  40% { clip: rect(0, 9999px, 0, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+@keyframes glit
+
+.glitch-bg {
+  background: repeating-linear-gradient(
+    45deg,
+    #0f0 0px,
+    #0f0 2px,
+    #000 2px,
+    #000 4px
+  );
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 20px;
+  }
+}

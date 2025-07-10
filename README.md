@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+# CyberThreat-Intelligence-Dashboard
+turns chaos into charts so your boss thinks you're a cybersecurity genius 
+>>>>>>> 1fb6d44391e3113620a2d4a915038a90f3917641
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

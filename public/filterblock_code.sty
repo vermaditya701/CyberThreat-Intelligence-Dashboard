@@ -1,0 +1,52 @@
+{/* Filters */}
+<div className="mb-6 flex flex-wrap gap-4">
+  <input
+    type="text"
+    placeholder="Filter by IP"
+    className="bg-zinc-800 p-2 rounded text-white placeholder-zinc-500"
+    value={filters.ip}
+    onChange={e => setFilters(prev => ({ ...prev, ip: e.target.value }))}
+    list="ip-suggestions"
+  />
+  <datalist id="ip-suggestions">
+    {suggestions.ips.map(ip => <option key={ip} value={ip} />)}
+  </datalist>
+
+  <input
+    type="text"
+    placeholder="Filter by Port"
+    className="bg-zinc-800 p-2 rounded text-white placeholder-zinc-500"
+    value={filters.port}
+    onChange={e => setFilters(prev => ({ ...prev, port: e.target.value }))}
+  />
+
+  <input
+    type="text"
+    placeholder="Filter by Attack"
+    className="bg-zinc-800 p-2 rounded text-white placeholder-zinc-500"
+    value={filters.attack}
+    onChange={e => setFilters(prev => ({ ...prev, attack: e.target.value }))}
+    list="attack-suggestions"
+  />
+  <datalist id="attack-suggestions">
+    {suggestions.attacks.map(a => <option key={a} value={a} />)}
+  </datalist>
+
+  <input
+    type="text"
+    placeholder="Filter by Time (HH:mm)"
+    className="bg-zinc-800 p-2 rounded text-white placeholder-zinc-500"
+    value={filters.time}
+    onChange={e => setFilters(prev => ({ ...prev, time: e.target.value }))}
+  />
+
+  <button
+    onClick={downloadCSV}
+    className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+  >⬇️ Download CSV</button>
+
+  <button
+    onClick={clearFilters}
+    className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition"
+  >❌ Clear Filters</button>
+</div>
