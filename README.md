@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛡️ Cyber Threat Intelligence Dashboard
 
-## Getting Started
-first you need to navigate into your Next.js project folder first.
-then, run the development server:
+This is a **Next.js** project powered by **Tailwind CSS**, **shadcn/ui**, and integrated with **VirusTotal API** and a custom real-time threat simulation engine.
 
-```bash
-npm run dev     ,where npm->node pacakge manager and dev->development 
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ✅ Real-time cyber threat logs
+- 📈 Threats Over Time (Line Chart)
+- 📊 Attack Distribution (Pie Chart)
+- 🧪 URL Virus Scanner (VirusTotal API)
+- 🌐 IP, Port, and Attack-Type Filtering
+- ⬇️ CSV Download of Filtered Logs
+- 🌗 Dark/Light Mode Toggle
+- ⚙️ Built-in simulator for testing logs
+- 🔒 Designed for threat visibility and network intelligence
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🧪 URL Virus Scanner (VirusTotal)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Scan any URL for malware detection using the [VirusTotal API](https://www.virustotal.com).
 
-## Learn More
+> ⚠️ Requires running the Flask API backend separately.
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js](https://nextjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [shadcn/ui](https://ui.shadcn.dev/)
+- [Recharts](https://recharts.org)
+- [Flask (API)](https://flask.palletsprojects.com/)
+- [VirusTotal Public API](https://developers.virustotal.com/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Project Structure
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
